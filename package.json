@@ -1,0 +1,22 @@
+{
+  "name": "ValidAI.tr",
+  "version": "0.0.1",
+  "description": "CV Data Validation Platform",
+  "author": "Curtis de Castro",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "live-server --open=./SpecRunner.html --port=8081",
+    "start": "live-server",
+    "build": "webpack -d --watch"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-native": "^0.64.2",
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.0",
+    "redux-thunk": "^2.3.0",
+    "thunk": "0.0.1"
+  },
+  "devDependencies": {}
+}
