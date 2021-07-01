@@ -1,6 +1,5 @@
-import $ from 'jquery';
-
 var searchYouTube = ({key, query, max = 5}, callback) => {
+  console.log('QUERY:::', query);
   $.get('https://www.googleapis.com/youtube/v3/search', {
     part: 'snippet',
     key: key,
@@ -10,8 +9,8 @@ var searchYouTube = ({key, query, max = 5}, callback) => {
     videoEmbeddable: 'true'
   })
     .then(({items}) => {
-      if (callback) {
-        callback(items);
+      if (items) {
+        dispatch();
       }
     })
     .fail(({responseJSON}) => {
@@ -21,4 +20,17 @@ var searchYouTube = ({key, query, max = 5}, callback) => {
     });
 };
 
-export default searchYouTube;
+const getYouTubeVideos = (query) {
+  var options = {
+    key: this.props.API_KEY,
+    query: query
+  };
+  searchYouTube(options, (videos) =>
+    this.setState({
+      videos: videos,
+      currentVideo: videos[0]
+    })
+  );
+}
+
+export default getYouTubeVideos;
