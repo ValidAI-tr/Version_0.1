@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import VideoList from './../components/VideoList.js';
+import QueueInfo from './../components/QueueInfo.js';
 import changeVideo from './../actions/currentVideo.js';
 
 var VideoListContainer = () => {};

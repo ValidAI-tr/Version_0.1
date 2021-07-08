@@ -1,6 +1,6 @@
 import React, { createContext } from 'react';
 // import Search from './Search.js';
-import VideoList from './VideoList.js';
+import QueueInfo from './QueueInfo.js';
 import VideoPlayer from './VideoPlayer.js';
 import SearchContainer from '../containers/SearchContainer.js';
 import { connect, useSelector } from 'react-redux';
@@ -49,15 +49,15 @@ class App extends React.Component {
         this.setState({
           searchInput: searchInput + value,
         });
-        // searchInput = "curt"
         dispatchHandleVideoSearch(searchInput);
       },
       searchInput,
     }
     return (
         <div>
-          Hello World from ValidAI.tr!
+          Welcome to Operation Blow
           <SearchContainer props={props} />
+          <QueueInfo videos={[]} />
           {/* <div className="row">
           <div className="col-md-7">
             <VideoPlayer video={{snippet:{title:'default',description:'default'},id:{videoId:0}}}/>
