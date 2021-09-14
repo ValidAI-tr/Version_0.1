@@ -4,6 +4,6 @@ Update 9/14/21 -- Work on this app is being done in a different repository, and 
 
 # Currently Working On...
 
-- Database Schema Building
-- Modeling dummy data in Mockaroo
-- Rendering out wireframe placement of the components to the DOM
+- UI/UX micro-interactions
+- Modeling dummy data & DB schema (Mockaroo)
+- Custom video player (React)
